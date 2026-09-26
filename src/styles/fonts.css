@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Matcha Mint';
+  src: url('/src/assets/font/matcha.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,26 @@
+:root {
+  /* === Colors === */
+  --color-primary: #4C1D95;
+  --color-secondary: #7C3AED;
+  --color-accent: #10B981;
+
+  /* === Fonts === */
+  --font-heading: 'Matcha Mint', cursive;
+  --font-body: 'Poppins', sans-serif;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+}
+
+[data-theme="light"] {
+  --color-bg:  #EDEAF5;
+  --color-text: #120E2B;
+  --color-text-muted: #475569;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0B0914;
+  --color-text: #E2E8F0;
+  --color-text-muted: #94A3B8;
+}
