@@ -22,9 +22,8 @@ body {
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	background-color: var(--color-secondary);
+	background-color: var(--color-primary);
 	box-shadow: 0 2px 28px rgba(0, 0, 0, 0.3);
-	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -35,7 +34,7 @@ body {
 
 #navbar .links {
 	display: flex;
-	gap: 0.60rem;
+	gap: 0.6rem;
 }
 
 #navbar a:not(.logo) {
@@ -49,10 +48,33 @@ body {
 }
 
 #navbar .logo {
-	font-family: "osl";
-	font-size: 0.80rem;
-	color: #fff;
-	text-decoration: none;
+  position: relative;
+  font-family: "osl";
+  font-size: 0.8rem;
+  color: #6ee7b7;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#navbar .logo::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+#navbar .logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 12px rgba(110, 231, 183, 0.6);
+}
+
+#navbar .logo:hover::after {
+  width: 100%;
 }
 
 /* ============================= */
@@ -237,6 +259,24 @@ body {
 /* ============================= */
 
 @media (min-width: 769px) {
+	/* Nav Section */
+
+	#navbar {
+		padding: 1rem 2.5rem;
+		font-size: 1.1px;
+		min-height: 70px;
+	}
+
+	#navbar .logo {
+		font-size: 1.7rem;
+	}
+
+	#navbar .links {
+		font-size: 1.2rem;
+		gap: 2rem;
+	}
+
+	/* Hero section */
 	#hero {
 		min-height: 90vh;
 		padding: 3rem 2rem;
