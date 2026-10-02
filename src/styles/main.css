@@ -6,6 +6,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -264,6 +265,7 @@ body {
 	display: flex;
 	align-items: center;
 	padding: 1.5rem 1rem;
+	margin-top: 80px;
 }
 
 .text-container {
@@ -357,6 +359,214 @@ body {
 	100% {
 		transform: translate3d(calc(-50% - 7px), 0, 0);
 	}
+}
+
+#projects {
+	padding: 3rem 1rem;
+}
+
+.projects-container {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.projects-container h2 {
+	font-size: 1.5rem;
+	color: var(--color-primary);
+	margin-bottom: 1.5rem;
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.project-card {
+	position: relative;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 1.5rem;
+	padding-top: 1.75rem;
+	box-shadow: 0 7px 20px rgba(76, 29, 149, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.75rem;
+	overflow: hidden;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+.project-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 15px 35px rgba(76, 29, 149, 0.2);
+}
+
+.project-card h3 {
+	position: relative;
+	font-size: 1.2rem;
+	color: var(--color-text);
+}
+
+.project-card:nth-child(1) h3::after {
+	content: "01";
+}
+
+.project-card:nth-child(2) h3::after {
+	content: "02";
+}
+
+.project-card:nth-child(3) h3::after {
+	content: "03";
+}
+
+.project-card h3::after {
+	position: absolute;
+	top: -0.5rem;
+	right: -0.5rem;
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: var(--color-primary);
+	opacity: 0.08;
+	z-index: -1;
+}
+
+.project-card p {
+	color: var(--color-text-muted);
+	font-size: 0.9rem;
+	line-height: 1.5;
+}
+
+.project-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	background-color: #ede9fe;
+	color: var(--color-secondary);
+	font-size: 0.75rem;
+	font-weight: 600;
+	padding: 4px 10px;
+	border-radius: 999px;
+}
+
+.project-tag i {
+	font-size: 0.9rem;
+}
+
+#projects .projects-container > .btn {
+	display: block;
+	margin: 0 auto;
+}
+
+.modal {
+	position: fixed;
+	inset: 0;
+	z-index: 200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal.hidden {
+	display: none;
+}
+
+.modal-overlay {
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(4px);
+}
+
+.modal-content {
+	position: relative;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 0;
+	max-width: 400px;
+	width: 90%;
+	max-height: 80vh;
+	overflow: hidden;
+	box-shadow: 0 20px 60px rgba(76, 29, 149, 0.25);
+	animation: modalPop 0.3s ease;
+}
+
+@keyframes modalPop {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.modal-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: #fff;
+	line-height: 1;
+	z-index: 1;
+}
+
+.modal-header {
+	background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+	padding: 1.5rem 2rem;
+}
+
+.modal-header h3 {
+	color: #fff;
+	font-size: 1.3rem;
+	margin: 0;
+}
+
+.modal-body {
+	padding: 1.5rem 2rem 2rem;
+	max-height: 60vh;
+	overflow-y: auto;
+}
+
+.modal-list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.modal-list li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid #eee;
+}
+
+.modal-list li:last-child {
+	border-bottom: none;
+}
+
+.modal-list a {
+	color: var(--color-text);
+	text-decoration: none;
+	font-size: 0.95rem;
+}
+
+.modal-list a:hover {
+	color: var(--color-secondary);
 }
 
 /* ============================= */
@@ -500,6 +710,16 @@ body {
 		100% {
 			transform: translate3d(calc(-50% - 12px), 0, 0);
 		}
+	}
+
+	/*projects*/
+	#projects {
+		padding: 4rem 2rem;
+	}
+
+	.projects-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
 	}
 
 	/* end media */

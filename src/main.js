@@ -1,1 +1,1 @@
-console.log("woi")
+import'./scripts/modules/modal.js'

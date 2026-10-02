@@ -110,37 +110,133 @@
 			<!--end section about -->
 
 			<!--start section stack -->
-<section id="stack">
-  <h2>My Stack</h2>
-  <div class="stack-container">
-    <div class="stack-track">
-      
-      <div class="stack-group">
-        <i class="devicon-html5-plain colored"></i>
-        <i class="devicon-css3-plain colored"></i>
-        <i class="devicon-javascript-plain colored"></i>
-        <i class="devicon-php-plain colored"></i>
-        <i class="devicon-vitejs-plain colored"></i>
-        <i class="devicon-git-plain colored"></i>
-      </div>
+			<section id="stack">
+				<h2>My Stack</h2>
+				<div class="stack-container">
+					<div class="stack-track">
+						<div class="stack-group">
+							<i
+								class="devicon-html5-plain colored"
+							></i>
+							<i
+								class="devicon-css3-plain colored"
+							></i>
+							<i
+								class="devicon-javascript-plain colored"
+							></i>
+							<i
+								class="devicon-php-plain colored"
+							></i>
+							<i
+								class="devicon-vitejs-plain colored"
+							></i>
+							<i
+								class="devicon-git-plain colored"
+							></i>
+						</div>
 
-      <div class="stack-group" aria-hidden="true">
-        <i class="devicon-html5-plain colored"></i>
-        <i class="devicon-css3-plain colored"></i>
-        <i class="devicon-javascript-plain colored"></i>
-        <i class="devicon-php-plain colored"></i>
-        <i class="devicon-vitejs-plain colored"></i>
-        <i class="devicon-git-plain colored"></i>
-      </div>
-
-    </div>
-  </div>
-</section>
+						<div class="stack-group" aria-hidden="true">
+							<i
+								class="devicon-html5-plain colored"
+							></i>
+							<i
+								class="devicon-css3-plain colored"
+							></i>
+							<i
+								class="devicon-javascript-plain colored"
+							></i>
+							<i
+								class="devicon-php-plain colored"
+							></i>
+							<i
+								class="devicon-vitejs-plain colored"
+							></i>
+							<i
+								class="devicon-git-plain colored"
+							></i>
+						</div>
+					</div>
+				</div>
+			</section>
 
 			<!--end section stack -->
 
 			<!--start section projects -->
-			<section id="projects"></section>
+			<section id="projects">
+				<div class="projects-container">
+					<h2>Projects</h2>
+
+					<div class="projects-grid">
+						<div class="project-card">
+							<h3>Cafe-RPL</h3>
+							<p>
+								Sistem cafe order management,
+								production-ready.
+							</p>
+							<span class="project-tag">PHP</span>
+							<a
+								href="https://github.com/duabyte/cafe-order-system"
+								target="_blank"
+								class="btn btn-outline"
+								>View Code</a
+							>
+						</div>
+
+						<div class="project-card">
+							<h3>To-Do List</h3>
+							<p>Simple to-do list app.</p>
+							<span class="project-tag">JS</span>
+							<a
+								href="https://github.com/duabyte/to-do-list"
+								target="_blank"
+								class="btn btn-outline"
+								>View Code</a
+							>
+						</div>
+
+						<div class="project-card">
+							<h3>Website Laundry</h3>
+							<p>
+								Sistem laundry sederhana dengan
+								localStorage.
+							</p>
+							<span class="project-tag">JS</span>
+							<a
+								href="https://github.com/duabyte/website-laundry"
+								target="_blank"
+								class="btn btn-outline"
+								>View Code</a
+							>
+						</div>
+					</div>
+
+					<button
+						id="view-more-btn"
+						class="btn btn-primary"
+					>
+						View More Projects
+					</button>
+				</div>
+			</section>
+
+<div id="projects-modal" class="modal hidden">
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal-content">
+    <button id="modal-close" class="modal-close">&times;</button>
+    <div class="modal-header">
+      <h3>More Projects</h3>
+    </div>
+    <div class="modal-body">
+      <ul class="modal-list">
+        <li><a href="https://github.com/duabyte/PhP-Login-Page" target="_blank">PhP-Login-Page</a></li>
+        <li><a href="https://github.com/duabyte/StopWatch" target="_blank">StopWatch</a></li>
+        <li><a href="https://github.com/duabyte/bin2dec" target="_blank">bin2dec</a></li>
+        <li><a href="https://github.com/duabyte/belajar-fetch-api" target="_blank">belajar-fetch-api</a></li>
+        <li><a href="https://github.com/duabyte/lampu-merah" target="_blank">lampu-merah</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 			<!--end section projects -->
 
 			<!--start section contact -->
@@ -148,6 +244,6 @@
 			<!--end section contact -->
 		</main>
 
-		<script src="/src/main.js" defer></script>
+		<script type="module" src="/src/main.js" defer></script>
 	</body>
 </html>
