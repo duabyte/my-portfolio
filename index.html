@@ -7,6 +7,8 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>dua portfolio</title>
+		
+		<link rel="icon" type="image/png" href="/public/icon.png" />
 
 		<link rel="stylesheet" href="/src/styles/main.css" />
 
@@ -40,6 +42,9 @@
 				<a href="#projects">Projects</a>
 				<a href="#contact">Contact Me</a>
 
+				<button id="theme-toggle" aria-label="Toggle theme">
+					<i class="bi bi-moon-stars"></i>
+				</button>
 				<!-- <a href="src/assets/" download="DuaByte-CV.pdf" class="cv-btn">Download CV</a> -->
 			</div>
 		</nav>
@@ -219,30 +224,100 @@
 				</div>
 			</section>
 
-<div id="projects-modal" class="modal hidden">
-  <div class="modal-overlay" id="modal-overlay"></div>
-  <div class="modal-content">
-    <button id="modal-close" class="modal-close">&times;</button>
-    <div class="modal-header">
-      <h3>More Projects</h3>
-    </div>
-    <div class="modal-body">
-      <ul class="modal-list">
-        <li><a href="https://github.com/duabyte/PhP-Login-Page" target="_blank">PhP-Login-Page</a></li>
-        <li><a href="https://github.com/duabyte/StopWatch" target="_blank">StopWatch</a></li>
-        <li><a href="https://github.com/duabyte/bin2dec" target="_blank">bin2dec</a></li>
-        <li><a href="https://github.com/duabyte/belajar-fetch-api" target="_blank">belajar-fetch-api</a></li>
-        <li><a href="https://github.com/duabyte/lampu-merah" target="_blank">lampu-merah</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+			<div id="projects-modal" class="modal hidden">
+				<div class="modal-overlay" id="modal-overlay"></div>
+				<div class="modal-content">
+					<button id="modal-close" class="modal-close">
+						&times;
+					</button>
+					<div class="modal-header">
+						<h3>More Projects</h3>
+					</div>
+					<div class="modal-body">
+						<ul class="modal-list">
+							<li>
+								<a
+									href="https://github.com/duabyte/PhP-Login-Page"
+									target="_blank"
+									>PhP-Login-Page</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://github.com/duabyte/StopWatch"
+									target="_blank"
+									>StopWatch</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://github.com/duabyte/bin2dec"
+									target="_blank"
+									>bin2dec</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://github.com/duabyte/belajar-fetch-api"
+									target="_blank"
+									>belajar-fetch-api</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://github.com/duabyte/lampu-merah"
+									target="_blank"
+									>lampu-merah</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			<!--end section projects -->
 
 			<!--start section contact -->
-			<section id="contact"></section>
+			<section id="contact">
+				<div class="contact-container">
+					<h2>Let's Connect</h2>
+					<p>
+						Have a project in mind or just want to say
+						hi? Reach out through any of these.
+					</p>
+					<div class="contact-icons">
+						<a
+							class="contact-icon email"
+							href="mailto:lowkey222a@gmail.com"
+							target="_blank"
+						>
+							<i class="bi bi-envelope-at"></i>
+						</a>
+						<a
+							class="contact-icon whatsapp"
+							href="https://wa.me/6285196739290"
+							target="_blank"
+						>
+							<i class="bi bi-whatsapp"></i>
+						</a>
+						<a
+							class="contact-icon instagram"
+							href="https://instagram.com/duaaa.s22"
+							target="_blank"
+						>
+							<i class="bi bi-instagram"></i>
+						</a>
+					</div>
+				</div>
+			</section>
 			<!--end section contact -->
 		</main>
+
+		<footer id="footer">
+			<p>&copy; 2026 DuaByte. Built with Vite.</p>
+			<div class="footer-links">
+				<a href="#hero">Back to Top</a>
+			</div>
+		</footer>
 
 		<script type="module" src="/src/main.js" defer></script>
 	</body>

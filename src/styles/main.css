@@ -18,6 +18,20 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+body,
+#navbar,
+.hero-container,
+.text-container,
+.project-card,
+.contact-icon,
+.modal-content,
+#footer {
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease,
+		border-color 0.3s ease;
+}
+
 /* navigation */
 #navbar {
 	position: sticky;
@@ -30,11 +44,12 @@ body {
 	align-items: center;
 	min-height: 50px;
 	padding: 10px 1.1rem;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 }
 
 #navbar .links {
 	display: flex;
+	align-items: center;
 	gap: 0.6rem;
 }
 
@@ -104,7 +119,7 @@ body {
 	max-width: 1100px;
 	margin: 0 auto;
 	width: 100%;
-	background-color: #fff;
+	background-color: var(--color-card-bg);
 	border-radius: 24px;
 	padding: 2rem;
 	box-shadow:
@@ -276,7 +291,7 @@ body {
 	max-width: 1100px;
 	margin: 0 auto;
 	width: 100%;
-	background-color: #fff;
+	background-color: var(--color-card-bg);
 	border-radius: 24px;
 	padding: 2rem;
 	box-shadow:
@@ -385,7 +400,7 @@ body {
 
 .project-card {
 	position: relative;
-	background-color: #fff;
+	background-color: var(--color-card-bg);
 	border-radius: 20px;
 	padding: 1.5rem;
 	padding-top: 1.75rem;
@@ -395,7 +410,9 @@ body {
 	align-items: flex-start;
 	gap: 0.75rem;
 	overflow: hidden;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
 }
 
 .project-card::before {
@@ -405,7 +422,11 @@ body {
 	left: 0;
 	right: 0;
 	height: 5px;
-	background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+	background: linear-gradient(
+		90deg,
+		var(--color-primary),
+		var(--color-secondary)
+	);
 }
 
 .project-card:hover {
@@ -491,7 +512,7 @@ body {
 
 .modal-content {
 	position: relative;
-	background-color: #fff;
+	background-color: var(--color-card-bg);
 	border-radius: 20px;
 	padding: 0;
 	max-width: 400px;
@@ -527,7 +548,11 @@ body {
 }
 
 .modal-header {
-	background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+	background: linear-gradient(
+		135deg,
+		var(--color-primary),
+		var(--color-secondary)
+	);
 	padding: 1.5rem 2rem;
 }
 
@@ -567,6 +592,101 @@ body {
 
 .modal-list a:hover {
 	color: var(--color-secondary);
+}
+
+#contact {
+	padding: 3rem 1rem;
+	text-align: center;
+}
+
+.contact-container {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.contact-container h2 {
+	font-size: 1.5rem;
+	color: var(--color-primary);
+	margin-bottom: 0.5rem;
+}
+
+.contact-container p {
+	color: var(--color-text-muted);
+	margin-bottom: 1.5rem;
+}
+
+.contact-icons {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.contact-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: var(--color-card-bg);
+	color: var(--color-primary);
+	font-size: 1.3rem;
+	text-decoration: none;
+	box-shadow: 0 7px 20px rgba(76, 29, 149, 0.1);
+	transition:
+		transform 0.2s ease,
+		background-color 0.2s ease,
+		color 0.2s ease;
+}
+
+.contact-icon:hover {
+	transform: translateY(-4px);
+	background-color: var(--color-secondary);
+	color: #fff;
+}
+
+#footer {
+	text-align: center;
+	padding: 2rem 1rem;
+	color: var(--color-text-muted);
+	font-size: 0.85rem;
+}
+
+#footer .footer-links a {
+	color: var(--color-text-muted);
+	text-decoration: none;
+	margin-top: 0.5rem;
+	display: inline-block;
+}
+
+#footer .footer-links a:hover {
+	color: var(--color-secondary);
+}
+
+#theme-toggle {
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 1.2rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.4rem;
+	transition: transform 0.2s ease;
+}
+
+#theme-toggle i {
+	display: inline-block;
+	transition: transform 0.4s ease;
+}
+
+#theme-toggle.rotating i {
+	transform: rotate(180deg);
+}
+
+#theme-toggle:hover {
+	transform: scale(1.1);
 }
 
 /* ============================= */
@@ -720,6 +840,10 @@ body {
 	.projects-grid {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 2rem;
+	}
+
+	#contact {
+		padding: 4rem 2rem;
 	}
 
 	/* end media */
