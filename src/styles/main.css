@@ -645,6 +645,25 @@ body,
 	color: #fff;
 }
 
+.contact-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.stupid-info:nth-child(even) {
+  padding-top: 4px;
+}
+
+.stupid-info {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0 !important;
+  padding: 0;
+  line-height: 1;
+  text-align: center;
+}
+
 #footer {
 	text-align: center;
 	padding: 2rem 1rem;
