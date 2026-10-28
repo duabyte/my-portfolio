@@ -1,15 +1,12 @@
-import { defineConfig, rollupVersion } from "vite";
+import { defineConfig } from "vite";
 import { resolve } from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        connect: resolve(__dirnams, "/src/fastConnect/connect.html"),
+        main: resolve("index.html"),
+        connect: resolve("src/fastConnect/connect.html"),
       },
     },
   },
