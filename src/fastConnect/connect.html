@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#f8f7fc" />
+ <title>Connect Fast | DuaByte</title>
+ <link rel="stylesheet" href="connect-fast.css" />
+</head>
+
+<body>
+ <main class="connect-page">
+  <a class="back-link" href="/index.html">← Back to DuaByte</a>
+
+  <section class="connect-card" aria-labelledby="page-title">
+   <div class="card-heading">
+    <span class="eyebrow">DUABYTE · CONTACT</span>
+    <h1 id="page-title">Let's connect.</h1>
+    <p>Got a question, an idea, or just want to say hi? Send me a message.</p>
+   </div>
+
+   <form id="connect-fast">
+    <div class="field-group">
+     <label for="nama">Name</label>
+     <input type="text" id="nama" name="nama" placeholder="Your name" autocomplete="name" required />
+    </div>
+
+    <div class="field-group">
+     <label for="gmail">Email</label>
+     <input type="email" id="gmail" name="email" placeholder="you@example.com" autocomplete="email" required />
+    </div>
+
+    <div class="field-group">
+     <label for="message">Message</label>
+     <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+    </div>
+
+    <button type="submit" id="submit-btn" class="submit-btn">
+     <span class="button-spinner" aria-hidden="true"></span>
+     <span class="button-check" aria-hidden="true">✓</span>
+     <span class="button-label">Send message</span>
+    </button>
+    <p class="form-note">Your message will be sent securely through Formspree.</p>
+   </form>
+  </section>
+ </main>
+
+ <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+  <div class="toast-symbol" id="toast-symbol" aria-hidden="true">✓</div>
+  <div class="toast-copy">
+   <strong id="toast-title">Message sent!</strong>
+   <p id="toast-message">Thanks for reaching out.</p>
+  </div>
+  <button class="toast-close" id="toast-close" type="button" aria-label="Close notification">×</button>
+ </div>
+
+ <script type="module" src="connect.js"></script>
+</body>
+
+</html>
